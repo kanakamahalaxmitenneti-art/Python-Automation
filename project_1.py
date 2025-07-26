@@ -1,11 +1,11 @@
 #E-mail and phone number extractor
 
-import pyperclip
+import pyper
 
 import re
 
 #Text containing email's and phone number to be pasted from clipboard
-text = str(pyperclip.paste())
+text = str(pyper.paste())
 
 #Regular expression for phone numbers
 
@@ -36,7 +36,7 @@ for groups in email_regex.findall(text):
 # Copy results to clipboard
 
 if len(match)>0:
-	pyperclip.copy('\n'.join(match))
+	pyper.copy('\n'.join(match))
 	print ('Copied to clipboard')
 	print ('\n'.join(match))
 else:
